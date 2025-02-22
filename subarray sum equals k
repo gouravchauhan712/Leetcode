@@ -1,0 +1,23 @@
+# subarray sum equals k
+
+class Solution {
+    public int subarraySum(int[] nums, int k) {
+        HashMap<Integer,Integer> hmap = new HashMap<>();
+        hmap.put(0,1);
+        int count = 0;
+        int sum = 0;
+
+        for(int n:nums)
+        {
+            sum += n;
+    
+        if(hmap.containsKey(sum-k))
+        {
+            count = count + hmap[sum-k];
+        }
+            hmap[sum]++;
+        }
+        return count;
+
+}
+}
