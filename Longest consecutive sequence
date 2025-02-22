@@ -1,0 +1,19 @@
+# longest consecutive sequence solution
+
+class Solution {
+    public int longestConsecutive(int[] nums) {
+        // Arrays.sort(nums);
+        TreeSet<Integer> tset = new TreeSet<>();
+        List<Integer> numbers = Arrays.asList(5, 2, 8, 3, 1, 7, 2, 5);
+        tset.addAll(numbers);
+        int count = 0;
+        for(Integer i:tset)
+        {
+            if((i+1-(i))==1)
+            {
+                count++;
+            }
+        }
+        return count;
+    }
+}
