@@ -1,0 +1,22 @@
+# Design hashset
+
+class MyHashSet {
+    private HashSet<Integer> myHashSet;
+    public MyHashSet() {
+        myHashSet = new HashSet<>();
+    }
+    
+    public void add(int key) {
+        myHashSet.add(key);
+        return;
+    }
+    
+    public void remove(int key) {
+        myHashSet.remove(key);
+        return;
+    }
+    
+    public boolean contains(int key) {
+        return myHashSet.contains(key);
+    }
+}
