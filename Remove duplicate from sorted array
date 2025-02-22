@@ -1,0 +1,20 @@
+# remove duplicate from sorted array
+
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        int count=0;
+        TreeSet<Integer> ts = new TreeSet<Integer>();
+        for(Integer i:nums){
+        ts.add(i);
+        }
+        int index = 0;
+        for(int num:ts)
+        {
+            nums[index] = num;
+            index++;
+        }
+        int size = ts.size();
+        return size;
+    }
+}
+
