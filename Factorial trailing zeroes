@@ -1,0 +1,25 @@
+# factorial trailing zeroes
+
+class Solution {
+    public int trailingZeroes(int n) {
+     int fact=1,count=0;
+        // if(n==1)
+        // {
+        //     return 1;
+        // }
+        // else
+        // {
+        //     return n * trailingZeroes(n-1);
+        // }
+
+        
+        while(n>=5)
+        {
+            n = n/5;
+            count = count + n;
+        }
+        return count;
+
+
+    }
+}
